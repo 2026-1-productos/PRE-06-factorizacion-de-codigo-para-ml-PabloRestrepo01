@@ -2,6 +2,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
+TEST_SIZE = 0.25
+RANDOM_STATE = 123456
 
 def prepare_data():
     url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
@@ -16,8 +18,8 @@ def prepare_data():
     x_train, x_test, y_train, y_test = train_test_split(
         x,
         y,
-        test_size=0.25,
-        random_state=123456,
+        test_size=TEST_SIZE,
+        random_state=RANDOM_STATE,
     )
 
     return x_train, x_test, y_train, y_test

@@ -6,14 +6,15 @@
 #
 
 # importacion de librerias
-from sklearn.neighbors import KNeighborsRegressor
 
-from ._internals.calculate_metrics import calculate_metrics
-from ._internals.prepare_data import prepare_data
-from ._internals.print_metrics import print_metrics
-from ._internals.save_model import save_model
+from sklearn.neighbors import KNeighborsRegressor
+from homework.src.internals.calculate_metrics import calculate_metrics
+from homework.src.internals.prepare_data import prepare_data
+from homework.src.internals.print_metrics import print_metrics
+from homework.src.internals.save_model import save_model
 
 x_train, x_test, y_train, y_test = prepare_data()
+
 
 # entrenar el modelo
 estimator = KNeighborsRegressor(n_neighbors=5)
